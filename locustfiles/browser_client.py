@@ -49,15 +49,12 @@ class BrowserClient():
 
 class BrowserLocust(Locust):
 
-    host = None
-
     def __init__(self, *args, **kwargs):
         super(BrowserLocust, self).__init__(*args, **kwargs)
         self.client = BrowserClient(self.host)
 
 
 class BrowserUser(BrowserLocust):
-    host = "http://192.168.2.112:8008"
 
     class task_set(TaskSet):
 
