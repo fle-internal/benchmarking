@@ -57,7 +57,6 @@ class BrowserLocust(Locust):
 
 
 class BrowserUser(BrowserLocust):
-    host = "http://192.168.2.112:8008"
 
     class task_set(TaskSet):
 
