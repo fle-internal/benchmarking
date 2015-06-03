@@ -49,8 +49,6 @@ class BrowserClient():
 
 class BrowserLocust(Locust):
 
-    host = None
-
     def __init__(self, *args, **kwargs):
         super(BrowserLocust, self).__init__(*args, **kwargs)
         self.client = BrowserClient(self.host)
